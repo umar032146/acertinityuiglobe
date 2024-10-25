@@ -1,0 +1,86 @@
+.domains-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .domain-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0;
+    padding: 20px;
+    /* opacity: 0; */
+    /* transition: opacity 1s ease-in; */
+  }
+  
+  /* Text content */
+  .domain-content {
+    width: 50%; /* Keep the width fixed */
+    opacity: 1; /* Start fully visible */
+    transform: translateY(0); /* Keep it in position */
+    transition: opacity 0.6s ease-in; /* Only transition opacity */
+  }
+  
+  
+  h2 {
+    background: linear-gradient(to right, white, gray);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  p {
+    color: gray;
+    font-size: 1.2rem;
+  }
+  
+  /* Typing effect */
+  .typing {
+    display: inline-block;
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
+    border-right: 2px solid gray; /* Cursor effect */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.6s ease-in;
+  }
+  
+  .typed-done {
+    border-right: none; /* Remove blinking cursor */
+    opacity: 1; /* Ensure text is visible when typing is done */
+  }
+  
+  .domain-image img {
+    width: 400px;
+    border-radius: 10px;
+    /* border: 1px solid white; */
+    height: 250px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Apply animations on first scroll into view */
+  .fade-in img {
+    opacity: 1;
+  }
+  
+  .animate-text {
+    opacity: 1; /* Make content visible when section is animated */
+    transform: translateY(0); /* Reset transform */
+  }
+  
+  .animate-text h2,
+  .animate-text p {
+    opacity: 1;
+    transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+  }
+  
+  .animate-text h2 {
+    transition-delay: 0.2s;
+  }
+  
+  .animate-text p {
+    transition-delay: 0.4s;
+  }
+  
